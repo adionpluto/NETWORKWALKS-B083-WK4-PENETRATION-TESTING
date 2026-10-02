@@ -9,7 +9,7 @@ Authorization: Written permission granted by client
 
 ---
 
-# 1. Executive Summary
+# Executive Summary
 
 A black-box penetration test was conducted against the authorized Mediroza General Hospital training environment.
 
@@ -23,7 +23,7 @@ The backup contained sensitive staff and shareholder information, demonstrating 
 
 ---
 
-# 2. Scope and Methodology
+# Scope and Methodology
 
 ## Scope
 
@@ -85,7 +85,7 @@ Documentation
 
 ---
 
-# 3. Findings and Proof of Exploitation
+# Findings and Proof of Exploitation
 
 ## Task 1 — Reconnaissance and Web Enumeration
 
