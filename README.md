@@ -149,32 +149,29 @@ The WAF detection process provided additional information about the target's def
 
 ---
 
-## Task 3 — Directory and Content Enumeration
+## Task 3 — Network Scanning with Nmap
 
-`gobuster` was used during the enumeration phase to identify accessible directories and application resources.
+`nmap` was used during the reconnaissance phase to scan the target and identify open ports and running services.
 
 ### Command
 
 ```bash
-gobuster dir -u https://medirozahospital.com -w <wordlist>
+nmap medirozahospital.com
 ```
 
-### Information Observed
+### Nmap can reveal:
 
-Directory enumeration can reveal:
-
-- Login pages
-- Application directories
-- Backup locations
-- Administrative paths
-- Publicly accessible resources
-- Other hidden content
+Open ports
+Running network services
+Service versions
+Potentially accessible network endpoints
+Operating system information, depending on the scan
 
 ### Result
 
-The enumeration process helped identify application endpoints that were relevant to the subsequent security assessment.
+The Nmap scan provided information about the target's exposed network services and helped identify potential entry points for further security assessment.
 
-![Gobuster](screenshot-gobuster.png)
+![Nmap](screenshot-gobuster.png)
 
 ---
 
