@@ -288,20 +288,9 @@ The PDF files were confirmed to require passwords before their contents could be
 
 ## Task 7 — Extract PDF Password Hashes
 
-`pdf2john` was used to extract password-hash information from the encrypted PDF files.
-
-### Command
-
-```bash
-pdf2john patient_report_1.pdf > patient1.hash
-```
+[Networkwalks Hashing Calculator]{https://networkwalks.com/password-cracker/} was used to extract password-hash information from the encrypted PDF files.
 
 The process was repeated for the other PDF files:
-
-```bash
-pdf2john patient_report_2.pdf > patient2.hash
-pdf2john patient_report_3.pdf > patient3.hash
-```
 
 ### Result
 
@@ -331,7 +320,7 @@ The third password was not present as a normal dictionary word, demonstrating wh
 
 All three PDF passwords were successfully recovered.
 
-![Hashcat](screenshot-passwordcrack1.png)
+![PDF Password Cracker](screenshot-passwordcrack1.png)
 
 ---
 
