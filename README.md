@@ -171,7 +171,7 @@ Operating system information, depending on the scan
 
 The Nmap scan provided information about the target's exposed network services and helped identify potential entry points for further security assessment.
 
-![Nmap](screenshot-gobuster.png)
+![Nmap](screenshot-nmap.png)
 
 ---
 
@@ -190,7 +190,7 @@ POST /patient/login.php
 ### Request Parameters
 
 ```text
-username=<username>&password=<password>
+username=<admin>&password=<admin>
 ```
 
 The authentication mechanism was tested by modifying the values supplied to the login parameters.
@@ -200,7 +200,7 @@ The authentication mechanism was tested by modifying the values supplied to the 
 The following payload was used in the authorized training environment:
 
 ```text
-username=admin'-- -&password=test
+username=admin'-- -&password=admin
 ```
 
 ### Explanation
@@ -214,7 +214,7 @@ Conceptually, an insecure query may behave like:
 ```sql
 SELECT * FROM users
 WHERE username = 'admin'-- -'
-AND password = 'test';
+AND password = 'admin';
 ```
 
 The injected comment prevents the password condition from being evaluated as intended.
@@ -230,7 +230,7 @@ Location: portal.php
 
 The redirect to `portal.php` confirmed that the authentication mechanism had been bypassed in the authorized training environment.
 
-![SQL Injection](screenshot-sqli.png)
+![SQL Injection](screenshot-burp2.png)
 
 ---
 
@@ -259,7 +259,8 @@ The portal displayed information including:
 
 The three patient reports were successfully retrieved for further analysis.
 
-![Patient Portal](screenshot-portal.png)
+![Patient Portal](screenshot-burp3.png)
+
 
 ---
 
@@ -306,19 +307,13 @@ pdf2john patient_report_3.pdf > patient3.hash
 
 The extracted hash information was prepared for password recovery using Hashcat.
 
-![PDF Hash Extraction](screenshot-pdf2john.png)
+![PDF Hash Extraction](screenshot-hashcalc.png)
 
 ---
 
 ## Task 8 — Crack the PDF Passwords
 
-Hashcat was used to recover the passwords from the extracted PDF hashes.
-
-### Command
-
-```bash
-hashcat -m 10500 patient1.hash <wordlist>
-```
+[Networkwalk Password cracker]{https://networkwalks.com/hash-calculator/} was used to recover the passwords from the extracted PDF hashes.
 
 The same approach was applied to the remaining PDF hashes.
 
@@ -336,33 +331,13 @@ The third password was not present as a normal dictionary word, demonstrating wh
 
 All three PDF passwords were successfully recovered.
 
-![Hashcat](screenshot-hashcat.png)
-
----
-
-## Task 9 — Decrypt the Recovered PDFs
-
-`qpdf` was used to decrypt the password-protected PDFs after their passwords had been recovered.
-
-### Command
-
-```bash
-qpdf --password='<recovered-password>' --decrypt patient_report_1.pdf patient1_decrypted.pdf
-```
-
-The same process was repeated for the remaining reports.
-
-### Result
-
-The encrypted PDF reports were successfully decrypted and their contents became accessible for further analysis.
-
-![Decrypted PDF](screenshot-qpdf.png)
+![Hashcat](screenshot-passwordcrack1.png)
 
 ---
 
 # Part 4 — Metadata Analysis
 
-## Task 10 — Extract PDF Metadata
+## Task 9 — Extract PDF Metadata
 
 After decrypting the reports, `exiftool` was used to inspect document metadata.
 
@@ -403,7 +378,7 @@ j.malik
 
 This information revealed an internal path that could be investigated as part of the authorized assessment.
 
-![ExifTool](screenshot-exiftool.png)
+![ExifTool](screenshot-sensdatal.png)
 
 ---
 
@@ -429,7 +404,7 @@ mediroza_db_backup_2019.sql
 
 The backup was approximately 6.3 KB in size.
 
-![Exposed Directory](screenshot-old-directory.png)
+![Exposed Directory](screenshot-sensdata.png)
 
 ---
 
