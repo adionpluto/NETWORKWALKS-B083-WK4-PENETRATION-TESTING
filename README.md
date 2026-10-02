@@ -378,7 +378,7 @@ j.malik
 
 This information revealed an internal path that could be investigated as part of the authorized assessment.
 
-![ExifTool](screenshot-sensdatal.png)
+![ExifTool](screenshot-exiftool.png)
 
 ---
 
