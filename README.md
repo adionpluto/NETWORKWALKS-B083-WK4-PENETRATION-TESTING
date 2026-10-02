@@ -145,7 +145,7 @@ The tool attempts to determine:
 
 The WAF detection process provided additional information about the target's defensive configuration.
 
-![Wafw00f](screenshot-wafw00f.png)
+![Wafw00f](screenshot-wafwoof.png)
 
 ---
 
