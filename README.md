@@ -288,7 +288,8 @@ The PDF files were confirmed to require passwords before their contents could be
 
 ## Task 7 — Extract PDF Password Hashes
 
-[Networkwalks Hashing Calculator]{https://networkwalks.com/password-cracker/} was used to extract password-hash information from the encrypted PDF files.
+Networkwalks Hashing Calculator  was used to extract password-hash information from the encrypted PDF files. [Link]{https://networkwalks.com/password-cracker/}
+
 
 The process was repeated for the other PDF files:
 
@@ -302,7 +303,7 @@ The extracted hash information was prepared for password recovery using Hashcat.
 
 ## Task 8 — Crack the PDF Passwords
 
-[Networkwalk Password cracker]{https://networkwalks.com/hash-calculator/} was used to recover the passwords from the extracted PDF hashes.
+Networkwalk Password cracker was used to recover the passwords from the extracted PDF hashes. [Link]{https://networkwalks.com/hash-calculator/}
 
 The same approach was applied to the remaining PDF hashes.
 
@@ -411,7 +412,8 @@ curl -O https://medirozahospital.com/old/mediroza_db_backup_2019.sql
 
 The database backup was successfully retrieved without authentication.
 
-![Database Retrieval](screenshot-curl-db.png)
+![Database Retrieval 1](screenshot-sensdata1.png)
+![Database Retrieval 2](screenshot-sensdata2.png)
 
 ---
 
