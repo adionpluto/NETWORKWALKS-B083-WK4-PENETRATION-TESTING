@@ -682,8 +682,10 @@ Unauthorized exploitation, password cracking, data retrieval, or security testin
 
 # Author
 
-*Bhabani Priyadarshini Panda*  
+*Aditya Choubey*  
 **Computer Science Student**
+
+[LinkedIn](https://www.linkedin.com/in/adityachby/) 
 
 ---
 
