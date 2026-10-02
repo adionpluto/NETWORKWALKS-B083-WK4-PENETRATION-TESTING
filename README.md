@@ -288,7 +288,7 @@ The PDF files were confirmed to require passwords before their contents could be
 
 ## Task 7 — Extract PDF Password Hashes
 
-Networkwalks Hashing Calculator  was used to extract password-hash information from the encrypted PDF files. [Link]{https://networkwalks.com/password-cracker/}
+Networkwalks Hashing Calculator  was used to extract password-hash information from the encrypted PDF files. ![Link]{https://networkwalks.com/password-cracker/}
 
 
 The process was repeated for the other PDF files:
@@ -303,7 +303,7 @@ The extracted hash information was prepared for password recovery using Hashcat.
 
 ## Task 8 — Crack the PDF Passwords
 
-Networkwalk Password cracker was used to recover the passwords from the extracted PDF hashes. [Link]{https://networkwalks.com/hash-calculator/}
+Networkwalk Password cracker was used to recover the passwords from the extracted PDF hashes. ![Link]{https://networkwalks.com/hash-calculator/}
 
 The same approach was applied to the remaining PDF hashes.
 
@@ -414,37 +414,6 @@ The database backup was successfully retrieved without authentication.
 
 ![Database Retrieval 1](screenshot-sensdata1.png)
 ![Database Retrieval 2](screenshot-sensdata2.png)
-
----
-
-## Task 13 — Analyse the Database Backup
-
-The recovered SQL backup was inspected to identify the information stored within it.
-
-### Data Exposed
-
-The `staff` table contained:
-
-- Full name
-- Job title
-- Department
-- Email address
-- Phone number
-- National ID number
-- Monthly salary
-
-The `shareholders` table contained:
-
-- Shareholder name
-- Share percentage
-- Shares held
-- Share class
-
-### Result
-
-The database backup exposed sensitive staff personal information, salary information, and shareholder ownership information.
-
-![Database Analysis](screenshot-database.png)
 
 ---
 
