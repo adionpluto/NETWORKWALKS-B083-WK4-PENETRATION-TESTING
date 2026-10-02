@@ -257,7 +257,7 @@ The portal displayed information including:
 
 ### Result
 
-The three patient reports were successfully retrieved for further analysis.
+The first patient's report and similarly two other's were successfully retrieved for further analysis.
 
 ![Patient Portal](screenshot-burp3.png)
 
